@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SplitView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THIS PLASE DOESN`T WORK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30x-2E-PAD">
+                                <rect key="frame" x="0.0" y="984" width="768" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0hj-cD-QYN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPY-HK-Tt5">
+                                <rect key="frame" x="0.0" y="509" width="768" height="475"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="475" id="jKt-4Z-AYs"/>
+                                </constraints>
+                            </webView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOP-Sb-EmG">
+                                <rect key="frame" x="0.0" y="20" width="768" height="489"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BOP-Sb-EmG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6Op-wk-ZKd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="30x-2E-PAD" secondAttribute="bottom" id="E5G-5A-N4a"/>
+                            <constraint firstItem="30x-2E-PAD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MpI-Et-Dtm"/>
+                            <constraint firstItem="XPY-HK-Tt5" firstAttribute="top" secondItem="BOP-Sb-EmG" secondAttribute="bottom" id="PgF-oL-cWJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BOP-Sb-EmG" secondAttribute="trailing" id="c7R-pj-3JI"/>
+                            <constraint firstItem="XPY-HK-Tt5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fSm-QL-X1K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XPY-HK-Tt5" secondAttribute="trailing" id="hLU-vL-GmA"/>
+                            <constraint firstItem="30x-2E-PAD" firstAttribute="top" secondItem="XPY-HK-Tt5" secondAttribute="bottom" id="laC-PY-aSc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="30x-2E-PAD" secondAttribute="trailing" id="onj-gL-L2n"/>
+                            <constraint firstItem="BOP-Sb-EmG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vhi-BU-Edd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="telegramView" destination="XPY-HK-Tt5" id="pZI-f4-R5Y"/>
+                        <outlet property="youtubeView" destination="BOP-Sb-EmG" id="Zpb-Zc-qjb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
